@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personalizar Home — Admin Trama</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/tema.js"></script>
+</head>
+<body>
+
+<div class="tema-wrapper">
+  <label title="Claro"><input type="radio" name="tema" id="tema-claro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </label>
+  <label title="Escuro"><input type="radio" name="tema" id="tema-escuro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+  </label>
+</div>
+
+<header class="topo-app">
+  <a href="../index.html" class="topo-app-marca">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#176849"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+    <span>Administração</span>
+  </a>
+  <div class="topo-app-acoes" style="margin-left:auto">
+    <div class="topo-usuario">
+      <div class="topo-avatar"><span id="topo-inicial">A</span></div>
+      <div class="topo-usuario-info">
+        <div class="topo-usuario-nome quem"><span class="apagado" id="topo-nome">Admin</span></div>
+        <div class="topo-usuario-role">Administrador</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="app-wrapper">
+  <aside class="sidebar">
+    <div class="sidebar-perfil">
+      <div class="sidebar-foto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="sidebar-nome">Administrador</div>
+      <div class="sidebar-papel">Admin Master</div>
+    </div>
+    <span class="sidebar-label">Dashboard</span>
+    <a href="admin.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Visão geral
+    </a>
+    <span class="sidebar-label">Gerenciar</span>
+    <a href="admin-empreendimentos.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Empreendimentos
+    </a>
+    <a href="admin-itens.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+      Itens
+    </a>
+    <a href="admin-tipos.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6"/></svg>
+      Tipos e categorias
+    </a>
+    <a href="admin-administradores.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Administradores
+    </a>
+    <span class="sidebar-label">Configuração</span>
+    <a href="admin-home.html" aria-current="page">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      Personalizar home
+    </a>
+    <div class="sidebar-sep"></div>
+    <a href="#" id="btn-sair">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Sair
+    </a>
+    <div class="sidebar-footer">
+      <div class="sidebar-ecosol"><strong>Painel de administração</strong><span>Trama Viamão</span></div>
+    </div>
+  </aside>
+
+  <main class="app-content">
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Personalizar homepage</h1>
+        <p>Configure os textos, imagem e destaques da página inicial pública.</p>
+      </div>
+      <div style="display:flex;gap:8px">
+        <a href="../index.html" target="_blank" class="botao ghost">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Ver homepage
+        </a>
+        <button class="botao" id="btn-salvar" type="button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          Salvar
+        </button>
+      </div>
+    </div>
+
+    <div id="msg-topo" style="display:none;margin-bottom:16px"></div>
+
+    <!-- Hero -->
+    <div class="form-grupo">
+      <div class="form-grupo-titulo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        Seção Hero (topo da página)
+      </div>
+      <div class="form-grid">
+        <div class="campo">
+          <label>Título principal</label>
+          <input type="text" id="hero-titulo" placeholder="Ex: Economize comprando do produtor local">
+        </div>
+        <div class="campo">
+          <label>Subtítulo</label>
+          <input type="text" id="hero-subtitulo" placeholder="Ex: Conectando produtores e consumidores em Viamão">
+        </div>
+      </div>
+      <div class="campo">
+        <label>Imagens do carrossel (1 a 6 fotos)</label>
+        <small style="color:var(--destaque,#176849)">Dimensão recomendada: <strong>1920×800 px</strong> (paisagem/horizontal). Aparece como fundo de tela cheia — fotos horizontais ficam muito melhores. Com mais de uma imagem vira carrossel automático.</small>
+        <div id="carrossel-slots" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;margin-top:14px"></div>
+      </div>
+    </div>
+
+    <!-- Texto de apoio -->
+    <div class="form-grupo">
+      <div class="form-grupo-titulo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Textos de apoio
+      </div>
+      <div class="form-grid">
+        <div class="campo">
+          <label>Texto do banner ecosol (seção central)</label>
+          <textarea id="banner-texto" rows="3" placeholder="Ex: Apoie a economia solidária de Viamão. Cada compra gera impacto positivo na comunidade local."></textarea>
+        </div>
+        <div class="campo">
+          <label>Call to action do banner</label>
+          <input type="text" id="banner-cta" placeholder="Ex: Cadastre seu empreendimento">
+        </div>
+      </div>
+    </div>
+
+    <!-- Destaque de categorias -->
+    <div class="form-grupo">
+      <div class="form-grupo-titulo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Categorias em destaque
+      </div>
+      <p style="font-size:.85rem;color:var(--muted);margin:0 0 16px">Escolha até 6 categorias para exibir como atalhos visuais na homepage.</p>
+      <div id="grade-categorias" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px">
+        <div class="loading-wrap" style="padding:16px"><div class="spinner"></div></div>
+      </div>
+    </div>
+
+    <!-- Sobre -->
+    <div class="form-grupo">
+      <div class="form-grupo-titulo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Sobre a rede (rodapé / seção informativa)
+      </div>
+      <div class="campo">
+        <label>Texto institucional</label>
+        <textarea id="sobre-texto" rows="3" placeholder="Fale sobre a rede, o projeto Trama e o IFRS Viamão…"></textarea>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script type="module">
+import { supabase } from '../assets/js/supabase.js'
+import { usuarioLogado, ehAdministrador, ligarBotaoSair } from '../assets/js/sessao.js'
+
+const u = await usuarioLogado()
+if (!u || !(await ehAdministrador(u.id))) window.location.href = 'entrar.html'
+document.getElementById('topo-nome').textContent = u.nome || u.email
+document.getElementById('topo-inicial').textContent = (u.nome || u.email)[0].toUpperCase()
+ligarBotaoSair()
+
+// ── Carrega config atual ────────────────────────────────────
+let cfg = null
+const { data } = await supabase
+  .from('config_home')
+  .select('*')
+  .order('id', { ascending: false })
+  .limit(1)
+  .maybeSingle()
+cfg = data
+
+if (cfg) {
+  if (cfg.hero_titulo)    document.getElementById('hero-titulo').value = cfg.hero_titulo
+  if (cfg.hero_subtitulo) document.getElementById('hero-subtitulo').value = cfg.hero_subtitulo
+  if (cfg.banner_texto)   document.getElementById('banner-texto').value = cfg.banner_texto
+  if (cfg.banner_cta)     document.getElementById('banner-cta').value = cfg.banner_cta
+  if (cfg.sobre_texto)    document.getElementById('sobre-texto').value = cfg.sobre_texto
+}
+
+// ── Carrossel de imagens (até 6 slots) ─────────────────────
+const imagensIniciais = (() => {
+  if (cfg?.hero_imagens && Array.isArray(cfg.hero_imagens))
+    return [...cfg.hero_imagens, null, null, null, null, null, null].slice(0, 6)
+  if (cfg?.hero_imagem)
+    return [cfg.hero_imagem, null, null, null, null, null]
+  return [null, null, null, null, null, null]
+})()
+
+const imagens = [...imagensIniciais] // estado mutável em memória
+
+const slotsDiv = document.getElementById('carrossel-slots')
+
+function renderSlots() {
+  slotsDiv.innerHTML = imagens.map((url, idx) => `
+    <div data-idx="${idx}" style="display:flex;flex-direction:column;align-items:center;gap:8px">
+      <div style="
+        width:100%;aspect-ratio:16/5;border-radius:8px;overflow:hidden;
+        border:2px dashed ${url ? 'var(--destaque)' : 'var(--borda)'};
+        background:var(--fundo-secundario);
+        display:flex;align-items:center;justify-content:center;
+        position:relative;cursor:pointer;
+      " class="slot-preview" data-idx="${idx}">
+        ${url
+          ? `<img src="${url}" alt="Foto ${idx+1}" style="width:100%;height:100%;object-fit:cover">`
+          : `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" stroke-width="1.5">
+               <rect x="3" y="3" width="18" height="18" rx="2"/>
+               <circle cx="8.5" cy="8.5" r="1.5"/>
+               <polyline points="21 15 16 10 5 21"/>
+             </svg>`}
+        <div style="
+          position:absolute;bottom:0;left:0;right:0;text-align:center;
+          font-size:.65rem;font-weight:600;color:white;
+          background:rgba(0,0,0,.45);padding:3px 0;
+        ">${idx + 1}ª foto</div>
+      </div>
+      <div style="display:flex;gap:6px">
+        <button type="button" class="botao ghost pequeno btn-slot-upload" data-idx="${idx}">
+          ${url ? 'Trocar' : 'Enviar'}
+        </button>
+        ${url ? `<button type="button" class="botao ghost pequeno btn-slot-remover" data-idx="${idx}" style="color:var(--erro,#c0392b)">✕</button>` : ''}
+      </div>
+      <input type="file" accept="image/*" style="display:none" class="input-slot-file" data-idx="${idx}">
+    </div>
+  `).join('')
+
+  // Upload
+  slotsDiv.querySelectorAll('.btn-slot-upload').forEach(btn => {
+    btn.addEventListener('click', () => {
+      slotsDiv.querySelector(`.input-slot-file[data-idx="${btn.dataset.idx}"]`).click()
+    })
+  })
+
+  slotsDiv.querySelectorAll('.slot-preview').forEach(div => {
+    div.addEventListener('click', () => {
+      slotsDiv.querySelector(`.input-slot-file[data-idx="${div.dataset.idx}"]`).click()
+    })
+  })
+
+  slotsDiv.querySelectorAll('.input-slot-file').forEach(input => {
+    input.addEventListener('change', async e => {
+      const file = e.target.files[0]
+      if (!file) return
+      const idx = parseInt(input.dataset.idx)
+      const ext = file.name.split('.').pop().toLowerCase()
+      const path = `config/hero-${idx + 1}-${Date.now()}.${ext}`
+      const btn = slotsDiv.querySelector(`.btn-slot-upload[data-idx="${idx}"]`)
+      btn.textContent = 'Enviando…'; btn.disabled = true
+      const { error } = await supabase.storage.from('fotos').upload(path, file, { upsert: true })
+      if (error) { alert('Erro no upload: ' + error.message); btn.textContent = 'Enviar'; btn.disabled = false; return }
+      const { data: { publicUrl } } = supabase.storage.from('fotos').getPublicUrl(path)
+      imagens[idx] = publicUrl
+      renderSlots()
+    })
+  })
+
+  // Remover
+  slotsDiv.querySelectorAll('.btn-slot-remover').forEach(btn => {
+    btn.addEventListener('click', () => {
+      imagens[parseInt(btn.dataset.idx)] = null
+      renderSlots()
+    })
+  })
+}
+
+renderSlots()
+
+// ── Categorias em destaque ──────────────────────────────────
+const { data: cats } = await supabase.from('categoria_de_empreendimento').select('id, nome').order('nome')
+const catDestaque = cfg?.categorias_destaque || []
+const gradeDiv = document.getElementById('grade-categorias')
+if (cats && cats.length) {
+  gradeDiv.innerHTML = cats.map(c => `
+    <label class="cat-check-item ${catDestaque.includes(c.id) ? 'selecionada' : ''}">
+      <input type="checkbox" value="${c.id}" ${catDestaque.includes(c.id) ? 'checked' : ''}>
+      ${c.nome}
+    </label>
+  `).join('')
+  gradeDiv.querySelectorAll('input[type=checkbox]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      const checked = gradeDiv.querySelectorAll('input:checked').length
+      if (checked > 6) { cb.checked = false; alert('Máximo 6 categorias em destaque.') }
+      cb.closest('label').classList.toggle('selecionada', cb.checked)
+    })
+  })
+} else {
+  gradeDiv.innerHTML = '<p style="color:var(--muted);font-size:.85rem">Nenhuma categoria cadastrada ainda.</p>'
+}
+
+// ── Salvar ──────────────────────────────────────────────────
+document.getElementById('btn-salvar').addEventListener('click', async () => {
+  const btn = document.getElementById('btn-salvar')
+  btn.disabled = true; btn.textContent = 'Salvando…'
+
+  const catsSel = [...gradeDiv.querySelectorAll('input:checked')].map(cb => parseInt(cb.value))
+  const imagensSalvas = imagens.filter(Boolean)
+
+  const payload = {
+    hero_titulo:         document.getElementById('hero-titulo').value.trim() || null,
+    hero_subtitulo:      document.getElementById('hero-subtitulo').value.trim() || null,
+    hero_imagem:         imagensSalvas[0] || null,       // legado: sempre a 1ª imagem
+    hero_imagens:        imagensSalvas.length ? imagensSalvas : null,
+    banner_texto:        document.getElementById('banner-texto').value.trim() || null,
+    banner_cta:          document.getElementById('banner-cta').value.trim() || null,
+    sobre_texto:         document.getElementById('sobre-texto').value.trim() || null,
+    categorias_destaque: catsSel.length ? catsSel : null,
+    atualizado_em:       new Date().toISOString()
+  }
+
+  let err
+  if (cfg) {
+    const { error } = await supabase.from('config_home').update(payload).eq('id', cfg.id)
+    err = error
+  } else {
+    const { error } = await supabase.from('config_home').insert(payload)
+    err = error
+  }
+
+  if (err) {
+    alert('Erro ao salvar: ' + err.message)
+  } else {
+    cfg = { ...cfg, ...payload }
+    const msgDiv = document.getElementById('msg-topo')
+    msgDiv.innerHTML = '<div class="aviso ok"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Configurações salvas. <a href="../index.html" target="_blank">Ver homepage</a></div>'
+    msgDiv.style.display = 'block'
+    setTimeout(() => msgDiv.style.display = 'none', 4000)
+  }
+
+  btn.disabled = false
+  btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Salvar'
+})
+</script>
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-inner">
+    <a href="admin.html" class="mobile-nav-item" id="mnav-adm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Geral
+    </a>
+    <a href="admin-empreendimentos.html" class="mobile-nav-item" id="mnav-emps">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Empreend.
+    </a>
+    <a href="admin-itens.html" class="mobile-nav-item" id="mnav-adm-itens">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+      Itens
+    </a>
+    <a href="admin-tipos.html" class="mobile-nav-item" id="mnav-tipos">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6"/></svg>
+      Tipos
+    </a>
+    <a href="admin-administradores.html" class="mobile-nav-item" id="mnav-admins">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Admins
+    </a>
+  </div>
+</nav>
+</body>
+</html>

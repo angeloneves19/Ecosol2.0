@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar — Trama Viamão</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/tema.js"></script>
+</head>
+<body class="pg-entrar">
+<div class="tema-wrapper">
+  <label title="Claro"><input type="radio" name="tema" id="tema-claro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </label>
+  <label title="Escuro"><input type="radio" name="tema" id="tema-escuro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+  </label>
+</div>
+
+<div class="auth-wrap">
+  <div class="auth-lado">
+    <div class="auth-lado-inner">
+      <div class="auth-lado-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="rgba(255,255,255,.2)"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M20 34 C20 29 24 26 24 22 C24 26 28 29 28 34" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <span>Rede Solidária Viamão</span>
+      </div>
+      <h1>Bem-vindo de volta à rede.</h1>
+      <p>Conecte-se ao seu empreendimento e continue fortalecendo a economia solidária de Viamão.</p>
+      <div class="auth-lado-estatisticas">
+        <div class="auth-stat">
+          <div class="auth-stat-num" id="stat-emps">—</div>
+          <div class="auth-stat-label">Empreendimentos</div>
+        </div>
+        <div class="auth-stat">
+          <div class="auth-stat-num" id="stat-itens-pub">—</div>
+          <div class="auth-stat-label">Itens disponíveis</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-formulario">
+    <div class="auth-logo-mobile">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#176849"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+      Rede Solidária Viamão
+    </div>
+    <div class="auth-titulo">
+      <h2>Entrar na sua conta</h2>
+      <p>Insira seu e-mail e senha para continuar.</p>
+    </div>
+
+    <form class="auth-form" id="form-entrar" novalidate>
+      <div class="campo">
+        <label for="campo-email">E-mail</label>
+        <input type="email" id="campo-email" placeholder="seu@email.com" required autocomplete="email">
+      </div>
+      <div class="campo">
+        <label for="campo-senha">Senha</label>
+        <input type="password" id="campo-senha" placeholder="••••••••" required autocomplete="current-password">
+        <small><a href="recuperar-senha.html" style="color:var(--verde)">Esqueci minha senha</a></small>
+      </div>
+
+      <div class="aviso erro" id="msg-erro">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span id="msg-erro-texto">E-mail ou senha incorretos.</span>
+      </div>
+
+      <button type="submit" class="botao grande w-full" id="btn-entrar">
+        Entrar na conta
+      </button>
+    </form>
+
+    <div class="auth-link">
+      Não tem conta? <a href="cadastrar.html">Criar conta agora</a>
+    </div>
+    <div class="auth-link">
+      <a href="../index.html" style="color:var(--muted)">← Voltar para o início</a>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="../assets/js/entrar.js"></script>
+</body>
+</html>

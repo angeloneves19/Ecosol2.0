@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item — Trama Viamão</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/tema.js"></script>
+</head>
+<body>
+
+<div class="tema-wrapper">
+  <label title="Claro"><input type="radio" name="tema" id="tema-claro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </label>
+  <label title="Escuro"><input type="radio" name="tema" id="tema-escuro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+  </label>
+</div>
+
+<header class="topo-app">
+  <a href="../index.html" class="topo-app-marca">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#176849"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+    <span>Rede Solidária Viamão</span>
+  </a>
+  <div class="topo-app-acoes" style="margin-left:auto">
+    <div class="topo-usuario">
+      <div class="topo-avatar"><span id="topo-inicial">?</span></div>
+      <div class="topo-usuario-info">
+        <div class="topo-usuario-nome quem"><span class="apagado" id="topo-nome">…</span></div>
+        <div class="topo-usuario-role">Empreendimento</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="app-wrapper">
+  <aside class="sidebar">
+    <div class="sidebar-perfil">
+      <div class="sidebar-foto"><span id="sidebar-inicial">?</span></div>
+      <div class="sidebar-nome quem"><span class="apagado" id="sidebar-nome">…</span></div>
+      <div class="sidebar-papel">Empreendimento</div>
+    </div>
+    <span class="sidebar-label">Menu principal</span>
+    <a href="painel.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Dashboard
+    </a>
+    <a href="perfil.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Meu perfil
+    </a>
+    <a href="itens.html" aria-current="page">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+      Meus itens
+    </a>
+    <div class="sidebar-sep"></div>
+    <a href="#" id="btn-sair">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Sair
+    </a>
+    <div class="sidebar-footer">
+      <div class="sidebar-ecosol"><strong>Seus produtos fazem diferença.</strong><span>Viamão — RS</span></div>
+    </div>
+  </aside>
+
+  <main class="app-content">
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1 id="titulo-pagina">Novo item</h1>
+        <p id="subtitulo-pagina">Cadastre um produto ou serviço do seu empreendimento.</p>
+      </div>
+      <a href="itens.html" class="botao ghost">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Voltar
+      </a>
+    </div>
+
+    <div id="msg-topo" style="display:none"></div>
+
+    
+    <div class="form-grupo">
+      <div class="form-grupo-titulo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        Informações básicas
+      </div>
+      <div class="form-grid">
+        <div class="campo">
+          <label>Nome do item <span class="req">*</span></label>
+          <input type="text" id="item-nome" placeholder="Ex: Pão de queijo artesanal">
+        </div>
+        <div class="campo">
+          <label>Natureza <span class="req">*</span></label>
+          <div class="natureza-toggle">
+            <button type="button" class="natureza-btn" data-natureza="1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+              Produto
+            </button>
+            <button type="button" class="natureza-btn" data-natureza="2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              Serviço
+            </button>
+          </div>
+        </div>
+        <div class="campo" id="campo-tipos" style="display:none">
+          <label>Tipos <span class="req">*</span> <span class="campo-dica">Pode marcar mais de um</span></label>
+          <div class="tipos-grid" id="tipos-grid"></div>
+        </div>
+      </div>
+      <div class="campo">
+        <label>Descrição</label>
+        <textarea id="item-descricao" rows="4" placeholder="Descreva o produto ou serviço com detalhes…"></textarea>
+      </div>
+    </div>
+
+    
+    <div class="form-grupo">
+      <div class="form-grupo-titulo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Preço e disponibilidade
+      </div>
+      <div class="form-grid">
+        <div class="campo">
+          <label>Preço (R$)</label>
+          <input type="number" id="item-preco" placeholder="0,00" min="0" step="0.01">
+          <small>Deixe em branco para "sob consulta".</small>
+        </div>
+        <div class="campo">
+          <label>Unidade</label>
+          <input type="text" id="item-unidade" placeholder="Ex: unidade, kg, hora, mês">
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="form-grupo">
+      <div class="form-grupo-titulo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        Fotos do item
+      </div>
+
+      <div id="fotos-galeria" class="fotos-galeria"></div>
+
+      <div class="upload-area" id="upload-area">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color:var(--muted)"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+        <p>Arraste imagens ou <button type="button" class="link-btn" id="btn-escolher-foto">clique aqui</button></p>
+        <small>JPEG, PNG ou WebP • máx. 5 MB cada • pode adicionar várias</small>
+      </div>
+      <input type="file" id="input-foto" accept="image/*" multiple style="display:none">
+    </div>
+
+    
+    <div style="display:flex;gap:12px;justify-content:flex-end;padding-bottom:40px">
+      <a href="itens.html" class="botao ghost">Cancelar</a>
+      <button type="button" class="botao" id="btn-salvar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+        Salvar item
+      </button>
+    </div>
+  </main>
+</div>
+
+<script type="module" src="../assets/js/item-form.js"></script>
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-inner">
+    <a href="painel.html" class="mobile-nav-item" id="mnav-painel">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Dashboard
+    </a>
+    <a href="perfil.html" class="mobile-nav-item" id="mnav-perfil">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Perfil
+    </a>
+    <a href="itens.html" class="mobile-nav-item" id="mnav-itens">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+      Itens
+    </a>
+    <a href="item-form.html" class="mobile-nav-item" id="mnav-novo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+      Novo item
+    </a>
+    <a href="#" class="mobile-nav-item" id="mnav-sair-emp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Sair
+    </a>
+  </div>
+</nav>
+</body>
+</html>

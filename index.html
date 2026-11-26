@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trama Viamão — Economia Solidária</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/tema.js"></script>
+</head>
+<body>
+
+<div class="tema-wrapper" aria-label="Tema">
+  <label title="Claro"><input type="radio" name="tema" id="tema-claro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </label>
+  <label title="Escuro"><input type="radio" name="tema" id="tema-escuro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+  </label>
+</div>
+
+<header class="topo">
+  <a href="index.html" class="topo-marca">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48" fill="none">
+      <rect width="48" height="48" rx="12" fill="#176849"/>
+      <path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <path d="M20 34 C20 29 24 26 24 22 C24 26 28 29 28 34" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <circle cx="24" cy="36" r="2" fill="white"/>
+    </svg>
+    <span>Rede Solidária<br>Viamão</span>
+  </a>
+  <nav class="topo-nav">
+    <a href="index.html" aria-current="page">Explorar</a>
+    <a href="index.html#empreendimentos">Empreendimentos</a>
+    <a href="index.html#sobre">Sobre</a>
+    <a href="index.html#como-funciona">Como Funciona</a>
+    <a href="index.html#contato">Contato</a>
+  </nav>
+  <div class="topo-acoes">
+    <a href="pages/entrar.html" class="topo-emp-link botao ghost pequeno">Área do empreendedor</a>
+    <button class="topo-hamburguer" id="btn-menu" aria-label="Abrir menu">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="menu-mobile-overlay" id="menu-overlay">
+  <div class="menu-mobile-painel">
+    <div class="menu-mobile-topo">
+      <div class="menu-mobile-marca">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#176849"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+        Rede Solidária
+      </div>
+      <button class="menu-mobile-fechar" id="btn-fechar-menu" aria-label="Fechar menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <nav class="menu-mobile-nav">
+      <a href="index.html">Explorar</a>
+      <a href="index.html#empreendimentos">Empreendimentos</a>
+      <a href="index.html#sobre">Sobre</a>
+      <a href="index.html#como-funciona">Como Funciona</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+    <div class="menu-mobile-cta">
+      <a href="pages/entrar.html" class="btn-emp">Área do empreendedor</a>
+      <a href="pages/cadastrar.html" class="btn-cadastro">Quero participar</a>
+    </div>
+  </div>
+</div>
+
+<section class="hero">
+  <div class="hero-carrossel" id="hero-carrossel">
+    <div class="hero-slide ativo"
+         style="background-image:url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=80')">
+    </div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-texto">
+      <p class="hero-eyebrow">Economia Solidária • Viamão</p>
+      <h1>Conectando pessoas, fortalecendo nossa comunidade.</h1>
+      <p>Descubra produtos e serviços de empreendimentos locais e apoie a economia solidária de Viamão.</p>
+
+      <div class="hero-busca-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" id="hero-busca-input" placeholder="O que você está procurando?" autocomplete="off">
+        <button id="btn-buscar-home" class="hero-busca-wrap button">Buscar</button>
+      </div>
+
+      <div class="hero-tags" id="hero-tags">
+        <span class="hero-tag" id="tag-produtos">Produtos</span>
+        <span class="hero-tag" id="tag-servicos">Serviços</span>
+        <span class="hero-tag" id="tag-categorias">Categorias ▾</span>
+        <span class="hero-tag" id="tag-resultados">Localização ▾</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-dots" id="hero-dots"></div>
+</section>
+
+<div class="valores-bar">
+  <div class="valor-item">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    Empreendimentos locais
+  </div>
+  <div class="valor-sep"></div>
+  <div class="valor-item">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    Economia solidária
+  </div>
+  <div class="valor-sep"></div>
+  <div class="valor-item">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    Consumo consciente
+  </div>
+  <div class="valor-sep"></div>
+  <div class="valor-item">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+    Uma Viamão mais forte
+  </div>
+</div>
+
+<span id="empreendimentos" aria-hidden="true" style="display:block;height:0;overflow:hidden;scroll-margin-top:80px"></span>
+<span id="secao-categorias" aria-hidden="true" style="display:block;height:0;overflow:hidden;scroll-margin-top:80px"></span>
+
+<main style="max-width:1300px;margin:0 auto;width:100%">
+  <section class="secao" id="secao-resultados">
+    <div class="secao-header">
+      <div>
+        <p class="secao-eyebrow">O que você encontra aqui</p>
+        <h2>Produtos e serviços feitos por nossa gente</h2>
+      </div>
+      <a href="index.html" class="card-link">
+        Ver todos
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div id="grade" style="min-height:200px">
+      <div class="loading-wrap"><div class="spinner"></div></div>
+    </div>
+  </section>
+</main>
+
+<div class="banner-ecosol" id="sobre" style="scroll-margin-top:72px">
+  <div>
+    <h2>Valorize o que é local.</h2>
+    <p id="banner-p">Fortaleça a economia solidária e construa uma cidade ainda melhor.</p>
+  </div>
+  <a href="pages/cadastrar.html" class="botao grande" id="banner-cta-link">Participe da rede →</a>
+</div>
+
+<section id="como-funciona" class="secao-como">
+  <div class="como-inner">
+    <div class="como-titulo">
+      <p class="secao-eyebrow">Simples e transparente</p>
+      <h2>Como funciona</h2>
+    </div>
+    <div class="como-steps">
+      <div class="como-step">
+        <div class="como-num">1</div>
+        <h3>Cadastre seu empreendimento</h3>
+        <p>Preencha o formulário com as informações do seu negócio. É rápido, gratuito e leva menos de 5 minutos.</p>
+      </div>
+      <div class="como-step">
+        <div class="como-num">2</div>
+        <h3>Aguarde a aprovação</h3>
+        <p>A equipe do IFRS Campus Viamão revisa o cadastro. Você recebe uma confirmação por e-mail assim que for aprovado.</p>
+      </div>
+      <div class="como-step">
+        <div class="como-num">3</div>
+        <h3>Apareça para a comunidade</h3>
+        <p>Seu empreendimento fica visível para toda Viamão. Adicione produtos, serviços, fotos e informações de contato.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="secao-contato">
+  <div class="contato-inner">
+    <div>
+      <p class="secao-eyebrow">Fale conosco</p>
+      <h2>Contato</h2>
+      <p>O Projeto Trama é uma iniciativa de extensão do IFRS Campus Viamão para fortalecer a economia solidária e o comércio justo na região. Entre em contato ou participe da rede.</p>
+    </div>
+    <div class="contato-info">
+      <div class="contato-item">
+        <div class="contato-item-icone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="contato-item-texto">
+          <strong>IFRS Campus Viamão</strong>
+          <span>Viamão — RS, Brasil</span>
+        </div>
+      </div>
+      <div class="contato-item">
+        <div class="contato-item-icone">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </div>
+        <div class="contato-item-texto">
+          <strong>Projeto Trama</strong>
+          <span>Extensão e Pesquisa — IFRS</span>
+        </div>
+      </div>
+      <a href="pages/cadastrar.html" class="botao" style="align-self:flex-start;margin-top:8px">Participar da rede →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="rodape">
+  <div class="rodape-inner">
+    <div>
+      <div class="rodape-marca">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#176849"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+        Rede Solidária Viamão
+      </div>
+      <p style="font-size:.85rem;max-width:280px;">Juntos fortalecemos a economia solidária de Viamão — RS.</p>
+    </div>
+    <div>
+      <h3>Plataforma</h3>
+      <ul>
+        <li><a href="index.html">Explorar</a></li>
+        <li><a href="pages/entrar.html">Área do empreendedor</a></li>
+        <li><a href="pages/cadastrar.html">Quero participar</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Institucional</h3>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#como-funciona">Como Funciona</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="rodape-bottom">
+    <span>© 2026 Trama Viamão — IFRS Viamão</span>
+    <span>Feito com ♥ para a comunidade</span>
+  </div>
+
+  <div class="rodape-devs">
+    <span class="rodape-devs-label">Desenvolvido por</span>
+
+    <a href="https://www.linkedin.com/in/angelo-neves/"
+       target="_blank" rel="noopener noreferrer"
+       class="rodape-dev-link"
+       title="Angelo Neves no LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      Angelo Neves
+    </a>
+
+    <span class="rodape-devs-dot">·</span>
+
+    <a href="https://www.linkedin.com/in/erlan-pirovani-3896b9364/"
+       target="_blank" rel="noopener noreferrer"
+       class="rodape-dev-link"
+       title="Erlan Piovani no LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      Erlan Piovani
+    </a>
+
+    <span class="rodape-devs-dot">·</span>
+
+    <span class="rodape-devs-label">Supervisão</span>
+
+    <a href="https://www.linkedin.com/in/alex-dias-gonsales-24185791/"
+       target="_blank" rel="noopener noreferrer"
+       class="rodape-dev-link rodape-dev-prof"
+       title="Prof. Alex Dias Gonsales no LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      Prof. Alex Dias Gonsales
+    </a>
+  </div>
+
+</footer>
+
+<script type="module" src="assets/js/busca.js"></script>
+<script type="module" src="assets/js/home.js"></script>
+</body>
+</html>

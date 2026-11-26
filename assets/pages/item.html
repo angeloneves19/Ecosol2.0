@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item — Trama Viamão</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/tema.js"></script>
+</head>
+<body>
+
+<div class="barra-carregando" id="barra-carregando"></div>
+
+<div class="tema-wrapper">
+  <label title="Claro"><input type="radio" name="tema" id="tema-claro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </label>
+  <label title="Escuro"><input type="radio" name="tema" id="tema-escuro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+  </label>
+</div>
+
+<!-- Navbar pública -->
+<header class="topo">
+  <a href="../index.html" class="topo-marca">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#176849"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+    <span>Rede Solidária Viamão</span>
+  </a>
+  <nav class="topo-nav">
+    <a href="../index.html">Início</a>
+    <a href="entrar.html" class="botao vazado pequeno">Entrar</a>
+    <a href="cadastrar.html" class="botao pequeno">Cadastrar</a>
+  </nav>
+</header>
+
+<!-- Detalhe do item -->
+<div class="container" style="padding-top:40px;padding-bottom:80px">
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb" id="breadcrumb">
+    <a href="../index.html">Início</a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    <span class="apagado" id="bc-emp">…</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    <span class="apagado" id="bc-item">…</span>
+  </nav>
+
+  <div class="item-detalhe apagado pulsar" id="item-detalhe">
+
+    <!-- Foto -->
+    <div class="item-detalhe-foto" id="item-foto">
+      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--muted)"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+    </div>
+
+    <!-- Informações -->
+    <div class="item-detalhe-info">
+      <div class="item-detalhe-tipo" id="item-tipo">…</div>
+      <h1 id="item-nome">…</h1>
+
+      <div class="item-detalhe-preco" id="item-preco">…</div>
+
+      <p id="item-desc" style="color:var(--muted);line-height:1.7"></p>
+
+      <!-- Empreendimento -->
+      <div class="item-emp-card" id="item-emp-card">
+        <div class="item-emp-foto" id="item-emp-foto">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </div>
+        <div class="item-emp-info">
+          <div class="item-emp-label">Vendido por</div>
+          <div class="item-emp-nome" id="item-emp-nome">…</div>
+        </div>
+        <a href="#" id="item-emp-link" class="botao ghost pequeno">Ver empreendimento</a>
+      </div>
+
+      <!-- Contato -->
+      <div id="item-contato" style="margin-top:20px;display:none">
+        <a href="#" id="btn-whatsapp" class="botao grande" style="background:#25D366;border:none;width:100%;justify-content:center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Entrar em contato
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="container">
+    <div class="rodape-col">
+      <div class="rodape-marca">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#176849"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+        <strong>Rede Solidária</strong>
+      </div>
+      <p>Economia solidária e comércio justo em Viamão — RS.</p>
+    </div>
+    <div class="rodape-col">
+      <strong>Plataforma</strong>
+      <a href="../index.html">Início</a>
+      <a href="entrar.html">Entrar</a>
+      <a href="cadastrar.html">Cadastrar empreendimento</a>
+    </div>
+    <div class="rodape-col">
+      <strong>Projeto Trama</strong>
+      <span>IFRS — Campus Viamão</span>
+      <span>Incubadora de EES</span>
+    </div>
+  </div>
+  <div class="rodape-base">
+    <span>© 2025 Rede Solidária Viamão</span>
+  </div>
+</footer>
+
+<script type="module">
+import { supabase } from '../assets/js/supabase.js'
+
+const params = new URLSearchParams(window.location.search)
+const itemId = params.get('id')
+
+if (!itemId) window.location.href = '../index.html'
+
+const barra = document.getElementById('barra-carregando')
+requestAnimationFrame(() => barra?.classList.add('avancando'))
+
+// Carrega item + empreendimento
+const { data: item } = await supabase
+  .from('item')
+  .select(`
+    id, nome, descricao, preco_atual, preco_atual_visivel, unidade, id_situacao,
+    empreendimento(id, nome, whatsapp1, whatsapp1_visivel, telefone1, telefone1_visivel, email, email_visivel)
+  `)
+  .eq('id', itemId)
+  .single()
+
+if (!item || item.id_situacao !== 2) {
+  document.querySelector('.container').innerHTML = '<div class="aviso erro" style="margin-top:40px">Item não encontrado ou indisponível.</div>'
+  throw new Error('not found')
+}
+
+// Carrega fotos do item (tabela foto_item)
+const { data: fotosItem } = await supabase
+  .from('foto_item')
+  .select('url_imagem, seq')
+  .eq('id_item', itemId)
+  .order('seq')
+
+// Carrega tipos do item
+const { data: tiposData } = await supabase
+  .from('item_tipo_de_item')
+  .select('tipo_de_item(nome)')
+  .eq('id_item', itemId)
+
+// Carrega foto do empreendimento
+const empId = item.empreendimento?.id
+const { data: fotosEmp } = empId ? await supabase
+  .from('foto_empreendimento')
+  .select('url_imagem')
+  .eq('id_empreendimento', empId)
+  .order('seq')
+  .limit(1) : { data: null }
+
+document.title = item.nome + ' — Trama Viamão'
+
+if (barra) { barra.classList.add('completa'); setTimeout(() => barra.remove(), 450) }
+
+const el = document.getElementById('item-detalhe')
+el.classList.remove('apagado', 'pulsar')
+
+// Fotos
+const fotos = (fotosItem || []).sort((a, b) => a.seq - b.seq)
+if (fotos.length) {
+  document.getElementById('item-foto').innerHTML =
+    `<img src="${fotos[0].url_imagem}" alt="${item.nome}" style="width:100%;height:100%;object-fit:cover;border-radius:12px">`
+}
+
+// Tipos
+const tipos = (tiposData || []).map(r => r.tipo_de_item?.nome).filter(Boolean)
+document.getElementById('item-tipo').textContent = tipos.join(', ')
+
+// Dados
+document.getElementById('item-nome').textContent = item.nome
+document.getElementById('item-desc').textContent = item.descricao || ''
+document.getElementById('item-preco').textContent = item.preco_atual_visivel && item.preco_atual
+  ? `R$ ${Number(item.preco_atual).toLocaleString('pt-BR', {minimumFractionDigits:2})}${item.unidade ? ' / ' + item.unidade : ''}`
+  : 'Preço sob consulta'
+
+// Empreendimento
+const emp = item.empreendimento
+if (emp) {
+  document.getElementById('item-emp-nome').textContent = emp.nome
+  document.getElementById('item-emp-link').href = `empreendimento.html?id=${emp.id}`
+  document.getElementById('bc-emp').innerHTML = `<a href="empreendimento.html?id=${emp.id}">${emp.nome}</a>`
+
+  const fotoEmpUrl = fotosEmp?.[0]?.url_imagem
+  if (fotoEmpUrl) {
+    document.getElementById('item-emp-foto').innerHTML =
+      `<img src="${fotoEmpUrl}" alt="${emp.nome}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`
+  }
+
+  const zapNum = (emp.whatsapp1_visivel && emp.whatsapp1) || (emp.telefone1_visivel && emp.telefone1)
+  if (zapNum) {
+    const tel = zapNum.replace(/\D/g, '')
+    const btn = document.getElementById('btn-whatsapp')
+    btn.href = `https://wa.me/55${tel}?text=Olá! Vi o item "${item.nome}" na Rede Solidária Viamão e tenho interesse.`
+    btn.target = '_blank'
+    document.getElementById('item-contato').style.display = ''
+  }
+}
+
+document.getElementById('bc-item').textContent = item.nome
+</script>
+</body>
+</html>

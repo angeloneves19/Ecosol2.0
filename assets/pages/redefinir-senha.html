@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova senha — Trama Viamão</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/tema.js"></script>
+</head>
+<body class="pg-entrar">
+<div class="tema-wrapper">
+  <label title="Claro"><input type="radio" name="tema" id="tema-claro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </label>
+  <label title="Escuro"><input type="radio" name="tema" id="tema-escuro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+  </label>
+</div>
+
+<div class="auth-wrap">
+  <!-- Painel lateral -->
+  <div class="auth-lado">
+    <div class="auth-lado-inner">
+      <div class="auth-lado-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="12" fill="rgba(255,255,255,.2)"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M20 34 C20 29 24 26 24 22 C24 26 28 29 28 34" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+        <span>Rede Solidária Viamão</span>
+      </div>
+      <h1>Quase lá.</h1>
+      <p>Escolha uma nova senha segura para voltar a acessar seu empreendimento.</p>
+    </div>
+  </div>
+
+  <!-- Formulário -->
+  <div class="auth-form-wrap">
+    <div class="auth-form">
+
+      <div class="auth-form-logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#176849"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+        <span>Rede Solidária</span>
+      </div>
+
+      <h2>Criar nova senha</h2>
+
+      <div id="aviso" style="display:none" class="aviso"></div>
+
+      <!-- Estado: aguardando o token do Supabase -->
+      <div id="estado-aguardando" style="text-align:center;padding:2rem 0">
+        <div class="loading-wrap"><div class="spinner"></div></div>
+        <p style="color:var(--muted)">Verificando link de recuperação…</p>
+      </div>
+
+      <!-- Formulário de nova senha (mostrado após receber o token) -->
+      <div id="form-nova-senha" style="display:none">
+        <p style="color:var(--muted);margin-bottom:1.5rem">Digite a nova senha. Mínimo de 8 caracteres.</p>
+        <div class="campo">
+          <label for="campo-senha">Nova senha</label>
+          <input type="password" id="campo-senha" placeholder="Mínimo 8 caracteres" minlength="8" autocomplete="new-password">
+        </div>
+        <div class="campo" style="margin-top:.75rem">
+          <label for="campo-senha2">Confirmar senha</label>
+          <input type="password" id="campo-senha2" placeholder="Repita a nova senha" autocomplete="new-password">
+        </div>
+        <button type="button" class="botao" id="btn-salvar" style="margin-top:1.25rem;width:100%;justify-content:center">
+          Salvar nova senha
+        </button>
+      </div>
+
+      <!-- Sucesso -->
+      <div id="form-sucesso" style="display:none;text-align:center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--verde)" stroke-width="1.5" style="margin-bottom:1rem"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        <h3 style="margin-bottom:.5rem">Senha atualizada!</h3>
+        <p style="color:var(--muted)">Sua senha foi salva. Você já pode entrar.</p>
+        <a href="entrar.html" class="botao" style="margin-top:1.5rem;display:inline-flex">Ir para o login</a>
+      </div>
+
+      <!-- Link expirado ou inválido -->
+      <div id="estado-erro" style="display:none;text-align:center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--danger,#c0392b)" stroke-width="1.5" style="margin-bottom:1rem"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <h3 style="margin-bottom:.5rem">Link inválido ou expirado</h3>
+        <p style="color:var(--muted)">O link de recuperação expirou ou já foi usado. Solicite um novo.</p>
+        <a href="recuperar-senha.html" class="botao ghost" style="margin-top:1.5rem;display:inline-flex">Solicitar novo link</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import { supabase } from '../assets/js/supabase.js'
+
+const aguardando   = document.getElementById('estado-aguardando')
+const formNovaSenha = document.getElementById('form-nova-senha')
+const formSucesso  = document.getElementById('form-sucesso')
+const estadoErro   = document.getElementById('estado-erro')
+const aviso        = document.getElementById('aviso')
+const btnSalvar    = document.getElementById('btn-salvar')
+const campoSenha   = document.getElementById('campo-senha')
+const campoSenha2  = document.getElementById('campo-senha2')
+
+function mostrarErro(msg) {
+  aviso.textContent = msg
+  aviso.className = 'aviso bad'
+  aviso.style.display = ''
+}
+
+// Caminho 1: chegou via redirect do index.html (?recovery=1)
+// A sessão já foi estabelecida pelo Supabase JS no index.html
+const viaRedirect = new URLSearchParams(location.search).get('recovery') === '1'
+
+if (viaRedirect) {
+  // Sessão já existe — mostra o formulário direto
+  aguardando.style.display = 'none'
+  formNovaSenha.style.display = ''
+  campoSenha.focus()
+} else {
+  // Caminho 2: chegou com hash direto na URL (#access_token=...)
+  // Escuta o evento PASSWORD_RECOVERY do Supabase JS
+  supabase.auth.onAuthStateChange((event) => {
+    if (event === 'PASSWORD_RECOVERY') {
+      aguardando.style.display = 'none'
+      formNovaSenha.style.display = ''
+      campoSenha.focus()
+    }
+  })
+
+  // Fallback: 4s sem evento = link inválido ou expirado
+  setTimeout(() => {
+    if (aguardando.style.display !== 'none') {
+      aguardando.style.display = 'none'
+      estadoErro.style.display = ''
+    }
+  }, 4000)
+}
+
+btnSalvar.addEventListener('click', async () => {
+  const senha  = campoSenha.value
+  const senha2 = campoSenha2.value
+  aviso.style.display = 'none'
+
+  if (senha.length < 8) { mostrarErro('A senha precisa ter pelo menos 8 caracteres.'); return }
+  if (senha !== senha2)  { mostrarErro('As senhas não coincidem.'); return }
+
+  btnSalvar.disabled = true
+  btnSalvar.textContent = 'Salvando…'
+
+  const { error } = await supabase.auth.updateUser({ password: senha })
+
+  btnSalvar.disabled = false
+  btnSalvar.textContent = 'Salvar nova senha'
+
+  if (error) {
+    mostrarErro('Não foi possível salvar a senha. Tente novamente.')
+    console.error(error)
+    return
+  }
+
+  formNovaSenha.style.display = 'none'
+  formSucesso.style.display = ''
+})
+</script>
+</body>
+</html>

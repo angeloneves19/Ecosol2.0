@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empreendimentos — Admin Trama</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/tema.js"></script>
+</head>
+<body>
+
+<div class="tema-wrapper">
+  <label title="Claro"><input type="radio" name="tema" id="tema-claro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+  </label>
+  <label title="Escuro"><input type="radio" name="tema" id="tema-escuro">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+  </label>
+</div>
+
+<header class="topo-app">
+  <a href="../index.html" class="topo-app-marca">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48" fill="none"><rect width="48" height="48" rx="10" fill="#176849"/><path d="M14 34 C14 24 24 20 24 14 C24 20 34 24 34 34" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+    <span>Administração</span>
+  </a>
+  <div class="topo-app-busca">
+    <div class="barra-busca">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" id="busca-emps" placeholder="Buscar empreendimento...">
+    </div>
+  </div>
+  <div class="topo-app-acoes">
+    <div class="topo-usuario">
+      <div class="topo-avatar"><span id="topo-inicial">A</span></div>
+      <div class="topo-usuario-info">
+        <div class="topo-usuario-nome quem"><span class="apagado" id="topo-nome">Admin</span></div>
+        <div class="topo-usuario-role">Administrador</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="app-wrapper">
+  <aside class="sidebar">
+    <div class="sidebar-perfil">
+      <div class="sidebar-foto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="sidebar-nome">Administrador</div>
+      <div class="sidebar-papel">Admin Master</div>
+    </div>
+    <span class="sidebar-label">Dashboard</span>
+    <a href="admin.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Visão geral
+    </a>
+    <span class="sidebar-label">Gerenciar</span>
+    <a href="admin-empreendimentos.html" aria-current="page">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Empreendimentos
+    </a>
+    <a href="admin-itens.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+      Itens
+    </a>
+    <a href="admin-tipos.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6"/></svg>
+      Tipos e categorias
+    </a>
+    <a href="admin-administradores.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Administradores
+    </a>
+    <span class="sidebar-label">Configuração</span>
+    <a href="admin-home.html">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Personalizar home
+    </a>
+    <div class="sidebar-sep"></div>
+    <a href="#" id="btn-sair">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      Sair
+    </a>
+    <div class="sidebar-footer">
+      <div class="sidebar-ecosol"><strong>Painel de administração</strong><span>Trama Viamão</span></div>
+    </div>
+  </aside>
+
+  <main class="app-content">
+    <div class="page-header">
+      <div class="page-header-left">
+        <h1>Empreendimentos</h1>
+        <p>Gerencie e modere todos os empreendimentos da plataforma.</p>
+      </div>
+    </div>
+
+    <!-- Filtro por situação -->
+    <div class="card">
+      <div style="padding:0 20px">
+        <div class="abas">
+          <a href="#" data-sit="todos" aria-current="page">Todos <span class="badge-num" id="cnt-todos">—</span></a>
+          <a href="#" data-sit="2">Ativos <span class="badge-num" id="cnt-ativo">—</span></a>
+          <a href="#" data-sit="1">Pendentes <span class="badge-num" id="cnt-pend">—</span></a>
+          <a href="#" data-sit="4">Suspensos <span class="badge-num" id="cnt-susp">—</span></a>
+          <a href="#" data-sit="5">Recusados <span class="badge-num" id="cnt-rec">—</span></a>
+        </div>
+      </div>
+
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Empreendimento</th>
+              <th>Situação</th>
+              <th>Itens</th>
+              <th>Cadastrado</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-emps">
+            <tr><td colspan="5"><div class="loading-wrap" style="padding:24px"><div class="spinner"></div></div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Modal detalhes (simplificado) -->
+    <div id="modal-emp" style="display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.5);display:none;align-items:center;justify-content:center;padding:20px">
+      <div style="background:var(--surface);border-radius:var(--radius-lg);width:100%;max-width:560px;overflow:auto;max-height:90vh">
+        <div class="card-header">
+          <h2 id="modal-nome">—</h2>
+          <button onclick="fecharModal()" class="botao ghost pequeno icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div class="card-body">
+          <div id="modal-conteudo"></div>
+          <div style="display:flex;gap:8px;margin-top:20px;justify-content:flex-end" id="modal-acoes"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script type="module">
+import { supabase } from '../assets/js/supabase.js'
+import { usuarioLogado, ehAdministrador, ligarBotaoSair } from '../assets/js/sessao.js'
+
+const u = await usuarioLogado()
+if (!u || !(await ehAdministrador(u.id))) window.location.href = 'entrar.html'
+document.getElementById('topo-nome').textContent = u.nome || u.email
+ligarBotaoSair()
+
+let todosEmps = []
+let filtroAtual = 'todos'
+
+const { data: emps } = await supabase
+  .from('empreendimento')
+  .select('id, nome, id_situacao, criado_em')
+  .order('criado_em', { ascending: false })
+
+todosEmps = emps || []
+
+// Contagens
+const conts = { 2: 0, 1: 0, 4: 0, 5: 0 }
+todosEmps.forEach(e => { if (conts[e.id_situacao] !== undefined) conts[e.id_situacao]++ })
+document.getElementById('cnt-todos').textContent = todosEmps.length
+document.getElementById('cnt-ativo').textContent = conts[2]
+document.getElementById('cnt-pend').textContent = conts[1]
+document.getElementById('cnt-susp').textContent = conts[4]
+document.getElementById('cnt-rec').textContent = conts[5]
+
+renderTabela()
+
+function renderTabela() {
+  const q = document.getElementById('busca-emps').value.toLowerCase()
+  const filtrados = todosEmps.filter(e => {
+    const passaSit = filtroAtual === 'todos' || String(e.id_situacao) === filtroAtual
+    const passaBusca = !q || e.nome.toLowerCase().includes(q)
+    return passaSit && passaBusca
+  })
+
+  const tbody = document.getElementById('tabela-emps')
+  if (!filtrados.length) {
+    tbody.innerHTML = '<tr><td colspan="5"><div class="vazio"><p>Nenhum empreendimento encontrado.</p></div></td></tr>'
+    return
+  }
+
+  const sitMap = { 1: ['warn','Pendente'], 2: ['ok','Ativo'], 3: ['dead','Excluído'], 4: ['off','Suspenso'], 5: ['bad','Recusado'] }
+
+  tbody.innerHTML = filtrados.map(e => {
+    const [cls, label] = sitMap[e.id_situacao] || ['off','—']
+    return `<tr>
+      <td><strong>${e.nome}</strong></td>
+      <td><span class="badge ${cls} dot">${label}</span></td>
+      <td><span class="apagado" style="font-size:.82rem">—</span></td>
+      <td><span style="font-size:.82rem;color:var(--muted)">${new Date(e.criado_em).toLocaleDateString('pt-BR')}</span></td>
+      <td>
+        <div class="acoes-tabela">
+          ${e.id_situacao === 1 ? `
+            <button class="botao pequeno" onclick="aprovarEmp(${e.id})">Aprovar</button>
+            <button class="botao perigo pequeno" onclick="recusarEmp(${e.id})">Recusar</button>
+          ` : ''}
+          ${e.id_situacao === 2 ? `<button class="botao ghost pequeno" onclick="suspenderEmp(${e.id})">Suspender</button>` : ''}
+          ${e.id_situacao === 4 ? `<button class="botao suave pequeno" onclick="reativarEmp(${e.id})">Reativar</button>` : ''}
+          <a href="empreendimento.html?id=${e.id}" class="botao ghost pequeno">Ver</a>
+        </div>
+      </td>
+    </tr>`
+  }).join('')
+}
+
+// Abas
+document.querySelector('.abas').addEventListener('click', e => {
+  const a = e.target.closest('[data-sit]')
+  if (!a) return
+  e.preventDefault()
+  document.querySelectorAll('.abas [data-sit]').forEach(x => x.removeAttribute('aria-current'))
+  a.setAttribute('aria-current', 'page')
+  filtroAtual = a.dataset.sit
+  renderTabela()
+})
+document.getElementById('busca-emps').addEventListener('input', renderTabela)
+
+async function mudarSituacao(id, novaSit) {
+  const { error } = await supabase.from('empreendimento').update({ id_situacao: novaSit }).eq('id', id)
+  if (error) { alert('Erro: ' + error.message); return false }
+  const idx = todosEmps.findIndex(e => e.id === id)
+  if (idx >= 0) todosEmps[idx].id_situacao = novaSit
+  // recalc
+  const conts2 = { 2: 0, 1: 0, 4: 0, 5: 0 }
+  todosEmps.forEach(e => { if (conts2[e.id_situacao] !== undefined) conts2[e.id_situacao]++ })
+  document.getElementById('cnt-todos').textContent = todosEmps.length
+  document.getElementById('cnt-ativo').textContent = conts2[2]
+  document.getElementById('cnt-pend').textContent = conts2[1]
+  document.getElementById('cnt-susp').textContent = conts2[4]
+  document.getElementById('cnt-rec').textContent = conts2[5]
+  renderTabela()
+  return true
+}
+
+window.aprovarEmp = (id) => mudarSituacao(id, 2)
+window.recusarEmp = (id) => { if (confirm('Recusar este empreendimento?')) mudarSituacao(id, 5) }
+window.suspenderEmp = (id) => { if (confirm('Suspender este empreendimento?')) mudarSituacao(id, 4) }
+window.reativarEmp = (id) => mudarSituacao(id, 2)
+
+// Verifica parâmetro na URL para filtro inicial
+const params = new URLSearchParams(window.location.search)
+if (params.get('filtro') === 'pendente') {
+  document.querySelector('[data-sit="1"]').click()
+}
+</script>
+<nav class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-inner">
+    <a href="admin.html" class="mobile-nav-item" id="mnav-adm">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      Geral
+    </a>
+    <a href="admin-empreendimentos.html" class="mobile-nav-item" id="mnav-emps">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Empreend.
+    </a>
+    <a href="admin-itens.html" class="mobile-nav-item" id="mnav-adm-itens">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+      Itens
+    </a>
+    <a href="admin-tipos.html" class="mobile-nav-item" id="mnav-tipos">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6"/></svg>
+      Tipos
+    </a>
+    <a href="admin-administradores.html" class="mobile-nav-item" id="mnav-admins">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      Admins
+    </a>
+  </div>
+</nav>
+</body>
+</html>
